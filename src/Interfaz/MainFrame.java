@@ -58,8 +58,8 @@ public class MainFrame extends JFrame{
                 }
 
                 try{
-                    if(c1.setPeso(Double.parseDouble(textPeso.getText()))==0){//Si devuelve 0 es porque se ha asignado correctamente
-                    c1.setPeso(Double.parseDouble(textPeso.getText()));
+                    if(c1.setPeso(Integer.parseInt(textPeso.getText()))==0){//Si devuelve 0 es porque se ha asignado correctamente
+                    c1.setPeso(Integer.parseInt(textPeso.getText()));
                     }else{
                         JOptionPane.showMessageDialog(mainPanel,"El peso no es válido");
                         abortar=true;}

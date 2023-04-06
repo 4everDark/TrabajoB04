@@ -2,7 +2,7 @@ package B04.PaqB04;
 
 public class Contenedores {
     private int identificador;
-    private double peso;
+    private int peso;
     private String pais;
     private boolean inspeccion;
     private int prioridad;
@@ -67,7 +67,7 @@ public class Contenedores {
     public void setPais (String pais){
         this.pais = pais;
     }
-    public int setPeso ( double peso){
+    public int setPeso ( int peso){
         //no puede tener peso negativo
         if (peso > 0) {
             this.peso = peso;
@@ -102,7 +102,7 @@ public class Contenedores {
     public int getIdentificador() {
         return identificador;
     }
-    public double getPeso() {
+    public int getPeso() {
         return peso;
     }
     public int getPrioridad() {
