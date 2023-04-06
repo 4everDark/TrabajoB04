@@ -1,7 +1,6 @@
 # TRABAJO JAVA SWING, GESTOR DE CONTENEDORES 
 
-PARTE 2:
-https://github.com/4everDark/TrabajoB04
+PARTE 3: https://github.com/4everDark/TrabajoB04 
 
 GRUPO B04:
  

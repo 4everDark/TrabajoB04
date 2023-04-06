@@ -2,7 +2,7 @@ package B04.PaqB04;
 
 public class Contenedores {
     private int identificador;
-    private int peso;
+    private double peso;
     private String pais;
     private boolean inspeccion;
     private int prioridad;
@@ -33,17 +33,6 @@ public class Contenedores {
         else this.recibe = recibe;
     }
     public Contenedores() {
-        // A ELIMINAR EN CASO DE NO ENCONTRAR FALLOS RELACIONADOS:
-        /*
-        *int identificador;
-        *int peso;
-        *String pais;
-        *boolean inspeccion;
-        *int prioridad;
-        *String descripcion;
-        *String envia;
-        *String recibe;
-        */
     }
     public Contenedores(Contenedores a){
         this.identificador=a.getIdentificador();
@@ -78,20 +67,24 @@ public class Contenedores {
     public void setPais (String pais){
         this.pais = pais;
     }
-    public void setPeso ( int peso){
+    public int setPeso ( double peso){
         //no puede tener peso negativo
         if (peso > 0) {
             this.peso = peso;
+            return 0;
         } else {
-            System.out.println("El peso no puede ser negativo");
+            //El peso no puede ser negativo
+            return 1;
         }
     }
-    public void setPrioridad ( int prioridad){
+    public int setPrioridad ( int prioridad){
         if (prioridad == 1 || prioridad == 2 || prioridad == 3) {
             this.prioridad = prioridad;
+            return 0;
         } else {
-            System.out.println("La prioridad dada no es posible (asigne una del 1 al 3). La prioridad del paquete ha sido asignada a 3");
             this.prioridad = 3;
+            //La prioridad dada no es posible (asigne una del 1 al 3). La prioridad del paquete ha sido asignada a 3
+            return 1;
         }
     }
     public void setPrioridadCero(){
@@ -109,7 +102,7 @@ public class Contenedores {
     public int getIdentificador() {
         return identificador;
     }
-    public int getPeso() {
+    public double getPeso() {
         return peso;
     }
     public int getPrioridad() {
